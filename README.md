@@ -1,0 +1,13 @@
+### Jenn Kaphammer - Spring 2025
+## Premise
+Zebrafish are commonly used in genetic and ecological research due to their rapid development. The biologist community utilizes the zebrafish (Danio rerio) as a model organism to give insight into broader genetic phenomenon. The Zebrafish Information Network (ZFIN) is an online database that houses publicly available research data on zebrafish. Utilizing machine learning techniques and models, I am interested in exploring the phenotypic outcome of zebrafish based on different genetic appearances. How do gene expressions affect phenotype in zebrafish, and can we accurately predict these outcomes using a machine learning model? Though the data would allow me to explore severity of phenotype outcomes as well, I am only interested in exploring the binary of if a phenotype shows present in a fish. This allows for more generality of the project and simplicity parsing the data.
+
+## Hypothesis
+Specific mutations identified in the genotype features dataset are significantly associated with abnormal phenotypic outcomes as recorded in the Fish with Abnormal and Normal Phenotypes dataset.
+
+## Sources
+https://zfin.org/ : Zebrafish info and datasets (DATASETS USED IN THIS PROJECT UPDATED AS OF 4.6.2025, THERE MAY BE NEWER VERSIONS AVALIABLE)
+https://pandas.pydata.org/docs/index.html: Documentation on properly loading txt files to dataframe/manipulating dfs. I also used the built-in dummy method to save time on one-hot encoding. If I were to one-hot encode from scratch, I would approach it by isolating the unique strings from each qualitative column. I would then manually replace each string with an assigned number throughout the whole dataframe.
+CSCI-4022 Notebook 4 k-means : Since it isn't permitted for this project to use a built-in method such as scipy's Kmeans for clustering, I based my implementation on the standards outlined in notebook 4.
+SKlearn PCA method : While we discussed PCA in class, we did not go over methods to implement within code. The sklearn built-in decomposition methods allows for me to take my extremely large feature matrix and compress in 2D. If I were to do this manually, I would first make sure each feature has zero mean (centered data). The next step is to compute the covariance matrix, and perform eigen-decomposition. Then top components would be selected and projected in 2D. Upon looking at the documentation, sklearn's method does this all 'under the hood'.
+Pattern Recognition and Machine Learning by Christopher M. Bishop : While I learned about logistic regression in intro to data science/stats, it had been a while since I coded it/utilized it. Chapter 4 of this textbook discusses logistic regression methods which I used for my implementation.
